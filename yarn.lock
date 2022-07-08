@@ -1364,7 +1364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@electron/get@npm:^1.13.0":
+"@electron/get@npm:^1.14.1":
   version: 1.14.1
   resolution: "@electron/get@npm:1.14.1"
   dependencies:
@@ -1763,14 +1763,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^18.0.3":
   version: 18.0.3
   resolution: "@types/node@npm:18.0.3"
   checksum: 5dec59fbbc1186c808b53df1ca717dad034dbd6a901c75f5b052c845618b531b05f27217122c6254db99529a68618e4cfc534ae3dbf4e88754e9e572df80defa
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.11.26, @types/node@npm:^16.11.7":
+"@types/node@npm:^16.11.26":
   version: 16.11.43
   resolution: "@types/node@npm:16.11.43"
   checksum: 96d09e68347c49ebf84fe1443360edc3f98336f0794256abc8e4f29ef3070546357cae17083d6fd9767b631239367c4f245fe64accff4af057d17bd6694f0b2b
@@ -1794,7 +1794,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.0.8":
+"@types/react@npm:^18.0.15":
   version: 18.0.15
   resolution: "@types/react@npm:18.0.15"
   dependencies:
@@ -3184,7 +3184,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-builder@npm:^23.0.3":
+"electron-builder@npm:^23.1.0":
   version: 23.3.0
   resolution: "electron-builder@npm:23.3.0"
   dependencies:
@@ -3246,7 +3246,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-store@npm:^8.0.1":
+"electron-store@npm:^8.0.2":
   version: 8.0.2
   resolution: "electron-store@npm:8.0.2"
   dependencies:
@@ -3263,16 +3263,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:^18.2.0":
-  version: 18.3.5
-  resolution: "electron@npm:18.3.5"
+"electron@npm:^19.0.8":
+  version: 19.0.8
+  resolution: "electron@npm:19.0.8"
   dependencies:
-    "@electron/get": ^1.13.0
+    "@electron/get": ^1.14.1
     "@types/node": ^16.11.26
     extract-zip: ^1.0.3
   bin:
     electron: cli.js
-  checksum: 650d5c1345df284a2329496a5ed4963246face8172188d64b90aa7da66b138855b54a669432ba50e123a0407145eecb95e2a342958ec3de3c6935278c13fc5c2
+  checksum: cbd4c11058eb3c656c4f589cd7b3a58b6ce2f9ac773b369c453a690bfca7e3b8c96939555b0cfce9a2afcd1af9b8d05fffaa3c45375bf3f2eb0c09735ccd5525
   languageName: node
   linkType: hard
 
@@ -4654,7 +4654,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^12.1.6":
+"next@npm:^12.2.1":
   version: 12.2.1
   resolution: "next@npm:12.2.1"
   dependencies:
@@ -4754,19 +4754,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextron@workspace:."
   dependencies:
-    "@types/node": ^16.11.7
-    "@types/react": ^18.0.8
-    electron: ^18.2.0
-    electron-builder: ^23.0.3
+    "@types/node": ^18.0.3
+    "@types/react": ^18.0.15
+    electron: ^19.0.8
+    electron-builder: ^23.1.0
     electron-serve: ^1.1.0
-    electron-store: ^8.0.1
-    next: ^12.1.6
+    electron-store: ^8.0.2
+    next: ^12.2.1
     nextron: ^8.1.0
-    react: ^18.1.0
-    react-dom: ^18.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
     react-icons: ^4.4.0
     styled-components: ^5.3.5
-    typescript: ^4.6.4
+    typescript: ^4.7.4
   languageName: unknown
   linkType: soft
 
@@ -5157,7 +5157,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.1.0":
+"react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -5185,7 +5185,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.1.0":
+"react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -5949,7 +5949,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.6.4":
+"typescript@npm:^4.7.4":
   version: 4.7.4
   resolution: "typescript@npm:4.7.4"
   bin:
@@ -5959,7 +5959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
   resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"
   bin:

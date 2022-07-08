@@ -15,7 +15,8 @@
     "productName": "测试程序",
     "linux": {
       "target": [
-        "AppImage"
+        "AppImage",
+        "deb"
       ],
       "icon": "build/icons",
       "category": "Development"
@@ -27,20 +28,20 @@
   },
   "dependencies": {
     "electron-serve": "^1.1.0",
-    "electron-store": "^8.0.1"
+    "electron-store": "^8.0.2"
   },
   "devDependencies": {
-    "@types/node": "^16.11.7",
-    "@types/react": "^18.0.8",
-    "electron": "^18.2.0",
-    "electron-builder": "^23.0.3",
-    "next": "^12.1.6",
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "electron": "^19.0.8",
+    "electron-builder": "^23.1.0",
+    "next": "^12.2.1",
     "nextron": "^8.1.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "styled-components": "^5.3.5",
-    "typescript": "^4.6.4"
+    "typescript": "^4.7.4"
   },
   "packageManager": "yarn@3.2.1"
 }

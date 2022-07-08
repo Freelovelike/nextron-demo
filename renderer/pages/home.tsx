@@ -1,5 +1,7 @@
 import { ipcRenderer } from "electron"
 import { NextPage } from "next"
+
+import Head from "next/head"
 import Router from "next/router"
 import { useEffect } from "react"
 import { AiOutlineEdit, AiOutlineEye } from "react-icons/ai"
@@ -13,43 +15,49 @@ const test1: NextPage<test1Props> = () => {
     console.log(Router.pathname)
   }, [])
   return (
-    <Tree
-      treeData={[
-        {
-          treeChildren: [
-            {
-              treeChildren: [
-                {
-                  id: 1,
-                  name: "文件",
-                  type: "file",
-                },
-              ],
-              id: 2,
-              name: "文件夹2",
-              type: "folder",
-            },
-          ],
-          id: 1,
-          name: "文件夹1",
-          type: "folder",
-        },
-      ]}
-      setting={({ id }) => (
-        <div style={{ display: "flex" }}>
-          <View
-            onClick={() => {
-              ipcRenderer.postMessage("newview", { path: "test" })
-            }}
-          />
-          <Edit
-            onClick={() => {
-              Router.push("test")
-            }}
-          />
-        </div>
-      )}
-    ></Tree>
+    <>
+      <Head>
+        <title>文件夹树</title>
+      </Head>
+
+      <Tree
+        treeData={[
+          {
+            treeChildren: [
+              {
+                treeChildren: [
+                  {
+                    id: 1,
+                    name: "文件",
+                    type: "file",
+                  },
+                ],
+                id: 2,
+                name: "文件夹2",
+                type: "folder",
+              },
+            ],
+            id: 1,
+            name: "文件夹1",
+            type: "folder",
+          },
+        ]}
+        setting={({ id }) => (
+          <div style={{ display: "flex" }}>
+            <View
+              onClick={() => {
+                ipcRenderer.postMessage("newview", { path: "test" })
+              }}
+            />
+            <Edit
+              onClick={() => {
+                Router.push("test")
+              }}
+            />
+          </div>
+        )}
+      ></Tree>
+    </>
   )
 }
 

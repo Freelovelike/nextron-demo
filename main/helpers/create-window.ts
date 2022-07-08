@@ -1,6 +1,7 @@
 import {
   BrowserWindow,
   BrowserWindowConstructorOptions,
+  Menu,
   screen,
 } from "electron"
 import Store from "electron-store"
@@ -17,7 +18,7 @@ export default (
     height: options.height,
   }
   let state = {}
-  let win
+  let win: BrowserWindow
 
   const restore = () => store.get(key, defaultSize)
 
@@ -80,7 +81,34 @@ export default (
     },
   }
   win = new BrowserWindow(browserOptions)
-
+  const menuTemplate = Menu.buildFromTemplate([
+    {
+      label: "设置",
+      commandId: 1,
+    },
+    {
+      label: "帮助",
+      commandId: 2,
+      submenu: [
+        {
+          label: "切换开发者模式",
+          accelerator:
+            process.platform === "darwin" ? "Shift+Cmd+I" : "Ctrl+Shift+I",
+          click: () => {
+            win.webContents.isDevToolsOpened()
+              ? win.webContents.closeDevTools()
+              : win.webContents.openDevTools()
+          },
+          type: "checkbox",
+        },
+        { type: "separator" },
+        {
+          label: "关于",
+        },
+      ],
+    },
+  ])
+  Menu.setApplicationMenu(menuTemplate)
   win.on("close", saveState)
 
   return win

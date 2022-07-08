@@ -26,8 +26,8 @@ if (isProd) {
     await mainWindow.loadURL("app://./home.html")
   } else {
     await mainWindow.loadURL(`${mainUrl}/home`)
-    mainWindow.webContents.openDevTools()
   }
+
   ipcMain.on("test", async () => {
     const test = createWindow("test", {
       width: 600,
