@@ -13,6 +13,13 @@ interface test1Props {}
 const test1: NextPage<test1Props> = () => {
   useEffect(() => {
     console.log(Router.pathname)
+    localStorage.setItem(
+      "query",
+      JSON.stringify({
+        a: 1,
+        b: "c",
+      })
+    )
   }, [])
   return (
     <>
@@ -46,14 +53,10 @@ const test1: NextPage<test1Props> = () => {
           <div style={{ display: "flex" }}>
             <View
               onClick={() => {
-                ipcRenderer.postMessage("newview", { path: "test" })
+                ipcRenderer.postMessage("newWindow", { path: "edit" })
               }}
             />
-            <Edit
-              onClick={() => {
-                Router.push("test")
-              }}
-            />
+            <Edit onClick={() => {}} />
           </div>
         )}
       ></Tree>

@@ -28,16 +28,21 @@ if (isProd) {
     await mainWindow.loadURL(`${mainUrl}/home`)
   }
 
-  ipcMain.on("test", async () => {
-    const test = createWindow("test", {
+  ipcMain.on("newWindow", async (event, { path, query }) => {
+    const test = createWindow(path, {
       width: 600,
       height: 600,
+      parent: mainWindow,
+      show: false,
     })
     if (isProd) {
-      await test.loadURL("app://./test.html")
+      await test.loadURL(`app://./${path}.html?a=1`)
     } else {
-      test.loadURL(`${mainUrl}/test`)
+      test.loadURL(`${mainUrl}/${path}?a=ds`)
     }
+    test.on("ready-to-show", () => {
+      test.show()
+    })
   })
 })()
 

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "nextron",
+  "name": "nextron1",
   "description": "测试程序",
   "version": "1.0.0",
   "author": "Yoshihide Shiono <3144622944@qq.com>",
@@ -8,15 +8,13 @@
   "homepage": "/",
   "scripts": {
     "dev": "nextron .",
-    "build": "nextron build",
-    "postinstall": "electron-builder install-app-deps"
+    "build": "nextron build"
   },
   "build": {
     "productName": "测试程序",
     "linux": {
       "target": [
-        "AppImage",
-        "deb"
+        "AppImage"
       ],
       "icon": "build/icons",
       "category": "Development"
@@ -33,12 +31,14 @@
   "devDependencies": {
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
+    "babel-plugin-styled-components": "^2.0.7",
     "electron": "^19.0.8",
     "electron-builder": "^23.1.0",
     "next": "^12.2.1",
     "nextron": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.2",
     "react-icons": "^4.4.0",
     "styled-components": "^5.3.5",
     "typescript": "^4.7.4"

@@ -7,7 +7,6 @@ import {
 } from "react"
 import { TreeItem } from "./treeItem"
 import { TreeContextType, TreeProps, TreeRefType } from "./types/tree"
-
 export const TreeContext = createContext<TreeContextType | null>(null)
 const TreeForWordRef: ForwardRefRenderFunction<TreeRefType, TreeProps> = (
   { treeData, onDelete, onRename, setting },
@@ -34,9 +33,11 @@ const TreeForWordRef: ForwardRefRenderFunction<TreeRefType, TreeProps> = (
         setting,
       }}
     >
-      {treeData.map((props) => {
-        return <TreeItem key={props.id} {...props} />
-      })}
+      <ul>
+        {treeData.map((props) => {
+          return <TreeItem key={props.id} {...props} />
+        })}
+      </ul>
     </TreeContext.Provider>
   )
 }

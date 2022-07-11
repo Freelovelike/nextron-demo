@@ -15,13 +15,7 @@ export type onDeleteType = ({
   id: number
   type: "folder" | "file"
 }) => void
-export type onRenameType = ({
-  id,
-  type,
-}: {
-  id: number
-  type: "folder" | "file"
-}) => void
+export type onRenameType = onDeleteType
 export interface TreeProps {
   treeData: TreeItemProps[]
   onDelete?: onDeleteType

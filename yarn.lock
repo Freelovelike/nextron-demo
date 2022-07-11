@@ -2284,6 +2284,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"attr-accept@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "attr-accept@npm:2.2.2"
+  checksum: 496f7249354ab53e522510c1dc8f67a1887382187adde4dc205507d2f014836a247073b05e9d9ea51e2e9c7f71b0d2aa21730af80efa9af2d68303e5f0565c4d
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:8.2.5":
   version: 8.2.5
   resolution: "babel-loader@npm:8.2.5"
@@ -2344,7 +2351,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-styled-components@npm:>= 1.12.0":
+"babel-plugin-styled-components@npm:>= 1.12.0, babel-plugin-styled-components@npm:^2.0.7":
   version: 2.0.7
   resolution: "babel-plugin-styled-components@npm:2.0.7"
   dependencies:
@@ -3489,6 +3496,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"file-selector@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "file-selector@npm:0.6.0"
+  dependencies:
+    tslib: ^2.4.0
+  checksum: 7d051b6e5d793f3c6e2ab287ba5e7c2c6a0971bccc9d56e044c8047ba483e18f60fc0b5771c951dc707c0d15f4f36ccb4f1f1aaf385d21ec8f7700dadf8325ba
+  languageName: node
+  linkType: hard
+
 "filelist@npm:^1.0.1":
   version: 1.0.4
   resolution: "filelist@npm:1.0.4"
@@ -4350,7 +4366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -4723,6 +4739,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nextron1@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "nextron1@workspace:."
+  dependencies:
+    "@types/node": ^18.0.3
+    "@types/react": ^18.0.15
+    babel-plugin-styled-components: ^2.0.7
+    electron: ^19.0.8
+    electron-builder: ^23.1.0
+    electron-serve: ^1.1.0
+    electron-store: ^8.0.2
+    next: ^12.2.1
+    nextron: ^8.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-dropzone: ^14.2.2
+    react-icons: ^4.4.0
+    styled-components: ^5.3.5
+    typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
+
 "nextron@npm:^8.1.0":
   version: 8.1.0
   resolution: "nextron@npm:8.1.0"
@@ -4749,26 +4787,6 @@ __metadata:
   checksum: c6942f1f1f08352f63349e34dfc5c10f605bfdb681b5af607ca5be6b85ae0010d5952d3afe87685bd2e48f6cb6bc48ae190e5865d71fe7775b613d0e5f01a4fd
   languageName: node
   linkType: hard
-
-"nextron@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "nextron@workspace:."
-  dependencies:
-    "@types/node": ^18.0.3
-    "@types/react": ^18.0.15
-    electron: ^19.0.8
-    electron-builder: ^23.1.0
-    electron-serve: ^1.1.0
-    electron-store: ^8.0.2
-    next: ^12.2.1
-    nextron: ^8.1.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-icons: ^4.4.0
-    styled-components: ^5.3.5
-    typescript: ^4.7.4
-  languageName: unknown
-  linkType: soft
 
 "node-addon-api@npm:^1.6.3":
   version: 1.7.2
@@ -4852,6 +4870,13 @@ __metadata:
     gauge: ^4.0.3
     set-blocking: ^2.0.0
   checksum: ae238cd264a1c3f22091cdd9e2b106f684297d3c184f1146984ecbe18aaa86343953f26b9520dedd1b1372bc0316905b736c1932d778dbeb1fcf5a1001390e2a
+  languageName: node
+  linkType: hard
+
+"object-assign@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "object-assign@npm:4.1.1"
+  checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
   languageName: node
   linkType: hard
 
@@ -5101,6 +5126,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.8.1":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
+  languageName: node
+  linkType: hard
+
 "proto-list@npm:~1.2.1":
   version: 1.2.4
   resolution: "proto-list@npm:1.2.4"
@@ -5169,6 +5205,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dropzone@npm:^14.2.2":
+  version: 14.2.2
+  resolution: "react-dropzone@npm:14.2.2"
+  dependencies:
+    attr-accept: ^2.2.2
+    file-selector: ^0.6.0
+    prop-types: ^15.8.1
+  peerDependencies:
+    react: ">= 16.8 || 18.0.0"
+  checksum: ef9ea7b3b5734e8eade2d29efc26da410dd7d6d046216331f6a51e2df4459c35f3a8f950fa7f723f3db6b0ead8aa68f58f6adbd39b98575c9fc8d8dfe02b671f
+  languageName: node
+  linkType: hard
+
 "react-icons@npm:^4.4.0":
   version: 4.4.0
   resolution: "react-icons@npm:4.4.0"
@@ -5178,7 +5227,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.7.0":
+"react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f

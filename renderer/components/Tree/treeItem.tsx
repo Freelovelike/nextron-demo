@@ -51,70 +51,85 @@ export const TreeItem: React.FC<TreeItemProps> = ({
   const delFolder = async () => {
     onDelete?.({ id, type })
   }
-  return type === "folder" ? (
-    <>
-      <Folder>
-        <span>
-          {isOpen ? (
-            <RiArrowDropDownFill size={30} />
-          ) : (
-            <RiArrowDropRightFill size={30} />
-          )}
-        </span>
-        <span>
-          {isOpen ? (
-            <AiOutlineFolderOpen size={25} />
-          ) : (
-            <AiOutlineFolder size={25} />
-          )}
-        </span>
-        {currentEdit === id ? (
-          <input
-            type='text'
-            defaultValue={currentName}
-            onChange={(e) => (currentName = e.target.value)}
-          />
-        ) : (
-          <FileName onClick={headClick}>{name}</FileName>
-        )}
+  return (
+    <li>
+      {type === "folder" ? (
+        <>
+          <Folder>
+            <span>
+              {isOpen ? (
+                <RiArrowDropDownFill size={30} />
+              ) : (
+                <RiArrowDropRightFill size={30} />
+              )}
+            </span>
+            <span>
+              {isOpen ? (
+                <AiOutlineFolderOpen size={25} />
+              ) : (
+                <AiOutlineFolder size={25} />
+              )}
+            </span>
+            {currentEdit === id ? (
+              <input
+                type='text'
+                defaultValue={currentName}
+                onChange={(e) => (currentName = e.target.value)}
+              />
+            ) : (
+              <FileName onClick={headClick}>{name}</FileName>
+            )}
 
-        {currentEdit === id ? (
-          <div>
-            <Check onClick={rename} />
-            <Close onClick={() => setCurrentEdit(-1)} />
-          </div>
-        ) : currentSetting === id ? (
-          <Settings>
-            <Eidt size={20} onClick={() => setCurrentEdit(id)} />
-            <Delect size={20} onClick={delFolder} />
-            <Close size={20} onClick={() => setCurrentSetting(-1)} />
-          </Settings>
-        ) : (
-          <Setting
-            onClick={() => {
-              setCurrentSetting(id)
-              setCurrentEdit(-1)
-            }}
-          />
-        )}
-      </Folder>
+            {currentEdit === id ? (
+              <div>
+                <Check onClick={rename} />
+                <Close onClick={() => setCurrentEdit(-1)} />
+              </div>
+            ) : currentSetting === id ? (
+              <Settings>
+                <Eidt size={20} onClick={() => setCurrentEdit(id)} />
+                <Delect size={20} onClick={delFolder} />
+                <Close size={20} onClick={() => setCurrentSetting(-1)} />
+              </Settings>
+            ) : (
+              <Setting
+                onClick={() => {
+                  setCurrentSetting(id)
+                  setCurrentEdit(-1)
+                }}
+              />
+            )}
+          </Folder>
 
-      {isOpen && (
-        <ul>
-          {treeChildren?.map((childProp) => {
-            return <TreeItem key={childProp.id} {...childProp} />
-          })}
+          {isOpen && (
+            <ul
+              style={{
+                marginLeft: 20,
+              }}
+            >
+              {treeChildren?.map((childProp) => {
+                return <TreeItem key={childProp.id} {...childProp} />
+              })}
+            </ul>
+          )}
+        </>
+      ) : (
+        <ul
+          style={{
+            display: "flex",
+            marginLeft: 30,
+            alignItems: "center",
+            height: 34.39,
+          }}
+        >
+          <span>
+            <AiOutlineFile />
+          </span>
+          <span>{name}</span>
+          <span>{setting?.({ id })}</span>
         </ul>
       )}
-    </>
-  ) : (
-    <div style={{ display: "flex" }}>
-      <span>
-        <AiOutlineFile />
-      </span>
-      <span>{name}</span>
-      <span>{setting?.({ id })}</span>
-    </div>
+    </li>
   )
 }
 const Check = styled(AiOutlineCheck)`
